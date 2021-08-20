@@ -84,3 +84,13 @@ form{
     border:1px solid #ccc;
     border-radius: 5px;
 }
+.profile-content,.profile-content> label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px;
+}
+.profile{
+    width: 40px;
+    margin-left: 2px;
+}
