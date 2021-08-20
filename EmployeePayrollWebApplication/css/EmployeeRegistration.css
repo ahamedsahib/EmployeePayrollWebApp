@@ -94,3 +94,13 @@ form{
     width: 40px;
     margin-left: 2px;
 }
+
+.department-content>label,.department-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 6px;
+}
+output{
+    margin-left: 15px;
+}
