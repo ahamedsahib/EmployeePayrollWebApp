@@ -21,7 +21,7 @@
                 <div class="form-head">Employee Payroll Form</div>
                 <div class="row-content">
                     <label class = "label text" for="name">Name</label>
-                    <input type="text" class="input" name="name" placeholder="Enter Your Name..." required>
+                    <input type="text" class="input" id='name'name="name" placeholder="Enter Your Name..." required>
                 </div>
                 <div class="row-content">
                     <label class = "label"for="profile">Profile Image</label>
@@ -76,7 +76,7 @@
                 <div class="row-content">
                     <label class="label" for="salary">Salary</label>
                     <input type="range" class="input" id="salary" min="30000" max="50000" step="100" name="salary"
-                    value="400000">
+                    value="40000">
                     <output class="salary-output text" for="salary">40000</output>
                 </div>
                 <div class="row-content ">
@@ -151,12 +151,13 @@
                 <div class="button-div">
                     <a href="./home.html" class="button ">Cancel</a>
                     <div class='SubmitReset'>
-                        <button type="submit" class="button submitButton">Submit</button>
+                        <button type="submit" class="button submitButton" onclick="onSubmit()">Submit</button>
                         <button type="reset" class="button">Reset</button>
                     </div>
                 </div>
             </form>
         </div>
         <script src="../JS/EmployeeRegistration.js"></script>
+        <script src="../JS/EmployeePayrollData.js"></script>
     </body>
 </html>
