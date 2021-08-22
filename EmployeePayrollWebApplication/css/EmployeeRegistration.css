@@ -97,7 +97,7 @@ form{
 
 .department-content>label,.department-content{
     display: flex;
-    flex-direction: row;
+    flex-flow: row ;
     align-items: center;
     padding: 0px 6px;
 }
@@ -118,3 +118,67 @@ select{
     margin-right: 6px;
     resize: vertical;
 }
+.button-div{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.button{
+    font-size: 20px;
+    font-family: Roboto;
+    color: #42515F;
+    min-width: 130px;
+    background-color: #E2E2E2;
+    text-decoration: none;
+    text-align: center;
+    padding:7px 7px;
+    border: 1px solid #969696;
+    cursor: pointer;
+}
+.submitButton{
+    margin-right: 10px;
+}
+@media only screen and (max-width:500px){
+    form{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .form-head{
+        font-size: 20px;
+    }
+    .label{
+        min-width: 70px;
+        font-size: 15px;
+    }
+    .profile-content,.profile-content> label{ 
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .profile{
+        width: 25px;
+    }
+    .gender-content{
+        display: flex;
+        flex-flow:row;
+    }
+    .department-content{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    select{
+        padding: 0px;
+        margin-right: 1px;
+    }
+    .button{
+        font-size: 14px;
+        min-width: 60px;
+    }
+    .submitButton{
+        margin-right: 3px;
+    }
+    
+}
+
