@@ -104,3 +104,17 @@ form{
 output{
     margin-left: 15px;
 }
+select:invalid {
+    color: gray;
+  }
+option{
+    color: black;
+}
+select{
+    padding:8px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font: normal normal normal 16px Roboto;
+    margin-right: 6px;
+    resize: vertical;
+}
