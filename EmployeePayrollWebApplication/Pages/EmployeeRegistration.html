@@ -79,8 +79,9 @@
                     value="400000">
                     <output class="salary-output text" for="salary">40000</output>
                 </div>
-                <div class="row-content">
+                <div class="row-content ">
                     <label class = "label" for="startDate">Start Date</label>
+                    <div class="Date">
                         <select name="Day" id="day" required >
                             <option value="" disabled selected >Day</option>
                             <option value="1">1</option>
@@ -141,6 +142,18 @@
                             <option value="2015">2015</option>
                             <option value="2014">2014</option>
                         </select>
+                    </div>
+                </div>
+                <div class="row-content">
+                    <label class="label" for="notes">Notes</label>
+                    <textarea name="Notes" id="notes" class="input" style="height: 100px"></textarea>
+                  </div>
+                <div class="button-div">
+                    <a href="./home.html" class="button ">Cancel</a>
+                    <div class='SubmitReset'>
+                        <button type="submit" class="button submitButton">Submit</button>
+                        <button type="reset" class="button">Reset</button>
+                    </div>
                 </div>
             </form>
         </div>
