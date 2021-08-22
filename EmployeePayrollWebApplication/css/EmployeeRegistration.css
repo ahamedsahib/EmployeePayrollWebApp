@@ -139,6 +139,10 @@ select{
 .submitButton{
     margin-right: 10px;
 }
+error{
+    color: tomato;
+    padding:0 0 0 5px;
+}
 
 @media only screen and (max-width:500px){
     form{

@@ -17,11 +17,12 @@
             </div>
         </header>
         <div class="form-content">
-            <form>
+            <form class="form" action="#" onsubmit="EmployeePayroll(); return false;">
                 <div class="form-head">Employee Payroll Form</div>
                 <div class="row-content">
                     <label class = "label text" for="name">Name</label>
                     <input type="text" class="input" id='name'name="name" placeholder="Enter Your Name..." required>
+                    <error id="errorName" for="name"></error>
                 </div>
                 <div class="row-content">
                     <label class = "label"for="profile">Profile Image</label>
@@ -60,15 +61,15 @@
                 <div class="row-content">
                     <label class ="label" for="department">Department</label>
                     <div class="department-content">
-                        <input type="checkbox" class="checkbox" id="hr" name="hr" value="HR">
+                        <input type="checkbox" class="checkbox" id="hr" name="department" value="HR">
                         <label class = "text" for="hr">HR</label>
-                        <input type="checkbox" class="checkbox" id="sales" name="sales" value="Sales">
+                        <input type="checkbox" class="checkbox" id="sales" name="department" value="Sales">
                         <label class = "text" for="sales">Sales</label>
-                        <input type="checkbox" class="checkbox" id="finance" name="finance" value="Finance">
+                        <input type="checkbox" class="checkbox" id="finance" name="department" value="Finance">
                         <label class = "text" for="finance">Finance</label>
-                        <input type="checkbox" class="checkbox" id="engineer" name="engineer" value="Engineer">
+                        <input type="checkbox" class="checkbox" id="engineer" name="department" value="Engineer">
                         <label class = "text" for="engineer">Engineer</label>
-                        <input type="checkbox" class="checkbox" id="others" name="others" value="others">
+                        <input type="checkbox" class="checkbox" id="others" name="department" value="others">
                         <label class = "text" for="others">Others</label>
                         
                     </div>
@@ -142,6 +143,7 @@
                             <option value="2015">2015</option>
                             <option value="2014">2014</option>
                         </select>
+                        <error class = "errorDate"for="date"></error>
                     </div>
                 </div>
                 <div class="row-content">
@@ -151,7 +153,7 @@
                 <div class="button-div">
                     <a href="./home.html" class="button ">Cancel</a>
                     <div class='SubmitReset'>
-                        <button type="submit" class="button submitButton" onclick="onSubmit()">Submit</button>
+                        <button type="submit" class="button submitButton">Submit</button>
                         <button type="reset" class="button">Reset</button>
                     </div>
                 </div>

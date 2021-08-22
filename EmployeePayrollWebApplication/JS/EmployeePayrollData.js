@@ -24,6 +24,12 @@ class EmployeePayrollData {
     set gender(value){
         return this._gender=value;
     }
+    get Department(){
+        return this._dept;
+    }
+    set Department(value){
+        this._dept=value;
+    } 
     get salary(){
         return this._salary;
     }
@@ -34,14 +40,25 @@ class EmployeePayrollData {
         return this._startDate;
     }
     set startDate(value){
-        this._startDate=value;
+        if(value>new Date())
+            throw "Start Date is a future date";
+        var diff = Math.abs(new Date().getTime() - value.getTime());
+        if(diff/(1000*60*60*24)>30)
+            throw 'Start Date is Beyond 30 days';
+        return this._startDate=value;
+    }
+    get EmployeeNotes(){
+        return this._notes;
+    }
+    set EmployeeNotes(value){
+        this._notes=value;
     }
     toString(){
         const option = {year:'numeric', month:'long', day:'numeric'};
         const empDate = this.startDate?"undefined":this.startDate.toLocaleDateString("en-US",option);
-        return "Empname = "+this.empName+" Profile Pic: "+this.profilePic+"Gender:"+this.gender+" Salary: "+this.salary+
-        " startDate: "+this.startDate;
+        return "Empname = "+this.empName+" Gender: "+this.Gender+" Profile Pic: "+this.profilePic+" Department: "+this.Department+" Salary: "+this.salary+
+        " startDate: "+empDate+" Note: "+this.EmployeeNotes;
     }
 
 }
-module.exports = {EmployeePayrollData};
+//module.exports = {EmployeePayrollData};
