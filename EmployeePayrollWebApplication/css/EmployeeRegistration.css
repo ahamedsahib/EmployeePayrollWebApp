@@ -139,6 +139,7 @@ select{
 .submitButton{
     margin-right: 10px;
 }
+
 @media only screen and (max-width:500px){
     form{
         display: flex;
