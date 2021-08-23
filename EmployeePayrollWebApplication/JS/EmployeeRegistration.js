@@ -94,4 +94,31 @@ const CreateOrUpdateLocal = (employeePayrollData) => {
     }
     //JSON to String
     localStorage.setItem("EmployeePayrollList", JSON.stringify(employeeList));
-  };
+  }
+  const resetForm=()=>{
+    setValue('#name','');
+    unsetSelected('[name=profile]');
+    unsetSelected('[name=gender]');
+    unsetSelected('[name=department]');
+    document.querySelector('#salary').value='';
+    document.querySelector('#notes').value='';
+    document.querySelector('#day').value='';
+    document.querySelector('#month').value='';
+    document.querySelector('#year').value='';
+    setTextValue(".errorDate", "");
+    setTextValue("#errorName", "");
+    const salary = document.querySelector("#salary");
+    const output = document.querySelector(".salary-output");
+    output.textContent = 40000;
+    alert("Reseted!");
+}
+const setValue=(id,value)=>{
+    const element = document.querySelector(id);
+    element.value=value;
+}
+const unsetSelected=(property)=>{
+    let allItems = document.querySelectorAll(property);
+    allItems.forEach(item=>{
+        item.checked=false;
+    });
+}
