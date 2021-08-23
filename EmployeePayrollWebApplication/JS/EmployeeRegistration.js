@@ -31,7 +31,15 @@ window.addEventListener('DOMContentLoaded',(event)=>{
         }
     })
   });
-
+//save create and save payroll object
+const save = () => {
+    try {
+      let employeePayrollData = EmployeePayroll();
+      CreateOrUpdateLocal(employeePayrollData);
+    } catch (e) {
+      return;
+    }
+  };
 //onSubmit validates this function
 const EmployeePayroll=()=>{
     let employee=new EmployeePayrollData;
@@ -51,6 +59,7 @@ const EmployeePayroll=()=>{
         throw e;
     }
     alert(employee.toString());
+    return employee;
         
 }catch(e){
         alert(e);
@@ -75,3 +84,14 @@ const getInputValue = (id)=>{
     let value = document.getElementById(id).value;
     return value;
 }
+const CreateOrUpdateLocal = (employeePayrollData) => {
+    //JSON Object
+    let employeeList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
+    if (employeeList != undefined) {
+      employeeList.push(employeePayrollData);
+    } else {
+      employeeList = [employeePayrollData];
+    }
+    //JSON to String
+    localStorage.setItem("EmployeePayrollList", JSON.stringify(employeeList));
+  };
