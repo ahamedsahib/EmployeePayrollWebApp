@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+body
+{
+    margin: 0;
+    height: 100%;
+}
+.header
+{
+    padding: 15px;
+    background-color: white;
+    border:1px solid #DEDEDE;
+}
+.logo
+{
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 0px solid green;
+    
+}
+.logo>img{
+    border: 0px solid green;
+}
+.emp_text,.emp_text_payroll
+{
+    font: normal normal bold 20px/25px Montserrat;
+    font-family:"Montserrat",sans-serif;
+    text-transform: uppercase;
+    color: #82A70C;
+    text-transform: uppercase;
+    line-height: 20px;
+     
+}
+.emp_text_payroll
+{
+    color: #42515F;
+}
