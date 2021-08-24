@@ -93,7 +93,7 @@ body
   .table{
     width: 100%;
     border-collapse: separate;
-    border-spacing: 0 15px;
+    border-spacing: 0 5px;
     min-width: 800px;
   }
   td,th{
@@ -108,7 +108,7 @@ body
     text-transform: uppercase;
     border: 0px solid #dddddd;
   }
-  tr::not(:first-child){
+  tr:not(:first-child){
       background: #ffffff ;
       border: 1px solid #e3e3e3;
       border-radius: 3px;
@@ -125,10 +125,11 @@ body
       align-items: center;
   }
   td img:first-child{
-      margin: 0 5px 0 7%;
+      margin: 0 2px 1px 22%;
   }
   td img{
       cursor: pointer;
+      width: 25%;
   }
   .dept-label{
     display: flex;
