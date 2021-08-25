@@ -1,3 +1,5 @@
+let isUpdate = false;//check wether this page is for update or add new employee
+let employeePayrollObj = {};
 window.addEventListener('DOMContentLoaded',(event)=>{
     const name = document.querySelector("#name");
     name.addEventListener('input',function(){
@@ -30,6 +32,7 @@ window.addEventListener('DOMContentLoaded',(event)=>{
             setTextValue('.errorDate',e);
         }
     })
+    checkForUpdate();
   });
 //save create and save payroll object
 const save = () => {
@@ -122,3 +125,36 @@ const unsetSelected=(property)=>{
         item.checked=false;
     });
 }
+const setSelectedValue=(property,value)=>{
+    let allItems = document.querySelectorAll(property);
+    allItems.forEach(items=>{
+      if(Array.isArray(value)){
+        if(value.includes(items.value)){
+          items.checked=true;
+        }
+      }else if(items.value==value){
+          items.checked=true;
+      }
+    });
+  }
+  //checks whether the page comes for update
+  const checkForUpdate=()=>{
+    const empPayrollJSON = localStorage.getItem('editEmp');
+    isUpdate=empPayrollJSON?true:false;
+    if(!isUpdate)return;
+    employeePayrollObj=JSON.parse(empPayrollJSON);
+    setForm();
+  }
+  //set form for updation
+  const setForm=()=>{
+    setValue('#name',employeePayrollObj._name);
+    setSelectedValue('[name=profile]',employeePayrollObj._profilePic);
+    setSelectedValue('[name=gender]',employeePayrollObj._gender);
+    setSelectedValue('[name=department]',employeePayrollObj._dept);
+    setValue('#salary',employeePayrollObj._salary);
+    setValue('#notes',employeePayrollObj._notes);
+    let date= stringifyDate(employeePayrollObj._startDate).split(" ");
+    setValue('#day',date[0]);
+    setValue('#month',date[1]);
+    setValue('#year',date[2]);
+  }
