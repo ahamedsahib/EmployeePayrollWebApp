@@ -1,4 +1,10 @@
 class EmployeePayrollData {
+    get id(){
+        return this._id;
+    }
+    set id(value){
+        this._id=value;
+    }
 
     get empName(){
         return this._name;
@@ -56,7 +62,7 @@ class EmployeePayrollData {
     toString(){
         const option = {year:'numeric', month:'long', day:'numeric'};
         const empDate = this.startDate?this.startDate.toLocaleDateString("en-US",option):"undefined";
-        return "Empname = "+this.empName+" Gender: "+this.Gender+" Profile Pic: "+this.profilePic+" Department: "+this.Department+" Salary: "+this.salary+
+        return "Id =" +this._id+"Empname = "+this.empName+" Gender: "+this.Gender+" Profile Pic: "+this.profilePic+" Department: "+this.Department+" Salary: "+this.salary+
         " startDate: "+empDate+" Note: "+this.EmployeeNotes;
     }
 
