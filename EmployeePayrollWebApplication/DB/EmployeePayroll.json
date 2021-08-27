@@ -23,19 +23,6 @@
       "_startDate": "29 August 2019",
       "_notes": "Terrific Engineer",
       "_profilePic": "../assets/profile-images/Ellipse -1.png"
-    },
-    {
-      "_name": "LionelMessi",
-      "_profilePic": "../assets/profile-images/Ellipse -3.png",
-      "_salary": "34400",
-      "_startDate": "19 Aug 2021",
-      "_gender": "male",
-      "_dept": [
-        "HR",
-        "Sales"
-      ],
-      "_notes": "ewfmessii",
-      "id": 3
     }
   ]
 }
